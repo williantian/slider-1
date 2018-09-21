@@ -1,0 +1,28 @@
+.window{
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.images{
+    position: relative;
+
+}
+.images > img{
+    width: 100%;
+    position: absolute;
+    transition: all 0.1s;
+    top: 0;
+}
+.images > img.enter{
+    transform: translateX(100%);
+}
+.images > img.current{
+    transform: translateX(0);
+    z-index: 1;
+    left: 0; /*没加好像也行*/
+}
+.images > img.leave{
+    transform: translateX(-100%);
+    z-index: 1;
+}
